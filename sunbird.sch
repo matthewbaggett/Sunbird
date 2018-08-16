@@ -25646,11 +25646,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="C4001" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2"/>
 <part name="D2003" library="SparkFun-DiscreteSemi" library_urn="urn:adsk.eagle:library:514" deviceset="DIODE-SCHOTTKY" device="-PMEG4005EJ" package3d_urn="urn:adsk.eagle:package:38441/1" value=""/>
 <part name="U$1" library="geusebio" deviceset="ESP8266_PROGRAMMER" device=""/>
-<part name="D1" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-RGB" device="NO_IC" package3d_urn="urn:adsk.eagle:package:39374/1"/>
+<part name="STATUS" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-RGB" device="NO_IC" package3d_urn="urn:adsk.eagle:package:39374/1"/>
 <part name="SUPPLY20" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
-<part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="1Ohm"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="56Ohm"/>
-<part name="R3" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="68Ohm"/>
+<part name="R8020" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="1Ohm"/>
+<part name="R8021" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="56Ohm"/>
+<part name="R8022" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" value="68Ohm"/>
 </parts>
 <sheets>
 <sheet>
@@ -25984,11 +25984,11 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <instance part="SUPPLY17" gate="G$1" x="30.48" y="119.38"/>
 <instance part="Q8010" gate="G$1" x="33.02" y="109.22" rot="MR0"/>
 <instance part="U$1" gate="G$1" x="15.24" y="45.72"/>
-<instance part="D1" gate="G$1" x="88.9" y="53.34" rot="MR0"/>
+<instance part="STATUS" gate="G$1" x="88.9" y="53.34" rot="MR0"/>
 <instance part="SUPPLY20" gate="G$1" x="109.22" y="60.96"/>
-<instance part="R1" gate="G$1" x="66.04" y="55.88"/>
-<instance part="R2" gate="G$1" x="66.04" y="53.34"/>
-<instance part="R3" gate="G$1" x="66.04" y="50.8"/>
+<instance part="R8020" gate="G$1" x="66.04" y="55.88"/>
+<instance part="R8021" gate="G$1" x="66.04" y="53.34"/>
+<instance part="R8022" gate="G$1" x="66.04" y="50.8"/>
 </instances>
 <busses>
 </busses>
@@ -26071,7 +26071,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="58.42" y="106.68" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="R8021" gate="G$1" pin="1"/>
 <wire x1="58.42" y1="53.34" x2="60.96" y2="53.34" width="0.1524" layer="91"/>
 <label x="58.42" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -26113,15 +26113,15 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="U$1" gate="G$1" pin="VCC"/>
 </segment>
 <segment>
-<pinref part="D1" gate="G$1" pin="BLU-A"/>
+<pinref part="STATUS" gate="G$1" pin="BLU-A"/>
 <wire x1="104.14" y1="55.88" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
 <pinref part="SUPPLY20" gate="G$1" pin="3.3V"/>
 <wire x1="109.22" y1="55.88" x2="109.22" y2="60.96" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="GRN-A"/>
+<pinref part="STATUS" gate="G$1" pin="GRN-A"/>
 <wire x1="104.14" y1="53.34" x2="109.22" y2="53.34" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="53.34" x2="109.22" y2="55.88" width="0.1524" layer="91"/>
 <junction x="109.22" y="55.88"/>
-<pinref part="D1" gate="G$1" pin="RED-A"/>
+<pinref part="STATUS" gate="G$1" pin="RED-A"/>
 <wire x1="104.14" y1="50.8" x2="109.22" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="50.8" x2="109.22" y2="53.34" width="0.1524" layer="91"/>
 <junction x="109.22" y="53.34"/>
@@ -26141,7 +26141,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="58.42" y="104.14" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R3" gate="G$1" pin="1"/>
+<pinref part="R8022" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="50.8" x2="58.42" y2="50.8" width="0.1524" layer="91"/>
 <label x="58.42" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -26220,7 +26220,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="104.14" y="101.6" size="1.778" layer="95"/>
 </segment>
 <segment>
-<pinref part="R1" gate="G$1" pin="1"/>
+<pinref part="R8020" gate="G$1" pin="1"/>
 <wire x1="60.96" y1="55.88" x2="58.42" y2="55.88" width="0.1524" layer="91"/>
 <label x="58.42" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -26301,22 +26301,22 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </net>
 <net name="N$14" class="0">
 <segment>
-<pinref part="R1" gate="G$1" pin="2"/>
-<pinref part="D1" gate="G$1" pin="BLU-C"/>
+<pinref part="R8020" gate="G$1" pin="2"/>
+<pinref part="STATUS" gate="G$1" pin="BLU-C"/>
 <wire x1="71.12" y1="55.88" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
-<pinref part="D1" gate="G$1" pin="GRN-C"/>
-<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="STATUS" gate="G$1" pin="GRN-C"/>
+<pinref part="R8021" gate="G$1" pin="2"/>
 <wire x1="73.66" y1="53.34" x2="71.12" y2="53.34" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$16" class="0">
 <segment>
-<pinref part="R3" gate="G$1" pin="2"/>
-<pinref part="D1" gate="G$1" pin="RED-C"/>
+<pinref part="R8022" gate="G$1" pin="2"/>
+<pinref part="STATUS" gate="G$1" pin="RED-C"/>
 <wire x1="71.12" y1="50.8" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
 </segment>
 </net>
