@@ -25374,8 +25374,8 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SUPPLY4" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="V_USB" device=""/>
 <part name="GND1" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND2" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="D1004" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="red"/>
-<part name="D1005" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="green"/>
+<part name="D1004" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="CHRG"/>
+<part name="D1005" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED" device="0603" package3d_urn="urn:adsk.eagle:package:39354/1" value="OK"/>
 <part name="SUPPLY5" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="V_BATT" device=""/>
 <part name="U1500" library="geusebio" deviceset="FS312F-G" device=""/>
 <part name="R1502" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
