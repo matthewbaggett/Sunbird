@@ -26244,7 +26244,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="U$1" gate="G$1" pin="TX"/>
 </segment>
 </net>
-<net name="GPIO5" class="0">
+<net name="BATT_SAMP_EN" class="0">
 <segment>
 <pinref part="U8000" gate="G$1" pin="GPIO5"/>
 <wire x1="116.84" y1="109.22" x2="101.6" y2="109.22" width="0.1524" layer="91"/>

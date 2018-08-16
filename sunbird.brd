@@ -2990,7 +2990,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="52.2478" y1="5.08" x2="53.34" y2="3.9878" width="0.3048" layer="16"/>
 <wire x1="47.498" y1="5.08" x2="52.2478" y2="5.08" width="0.3048" layer="16"/>
 </signal>
-<signal name="GPIO5">
+<signal name="BATT_SAMP_EN">
 <contactref element="U8000" pad="14"/>
 <contactref element="Q8010" pad="1"/>
 <wire x1="55.18" y1="1.3895" x2="55.18" y2="3.556" width="0.3048" layer="1"/>
