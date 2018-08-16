@@ -2831,7 +2831,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="54.0258" y1="12.8778" x2="55.18" y2="14.032" width="0.3048" layer="1"/>
 <wire x1="55.18" y1="14.032" x2="55.18" y2="17.5895" width="0.3048" layer="1"/>
 </signal>
-<signal name="GPIO16">
+<signal name="GREEN">
 <contactref element="U8000" pad="4"/>
 <contactref element="R8021" pad="1"/>
 <wire x1="11.01" y1="12.446" x2="12.192" y2="12.446" width="0.3048" layer="1"/>
@@ -2873,7 +2873,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="50.36275" y1="15.9766" x2="79.8840625" y2="15.9766" width="0.3048" layer="16"/>
 <wire x1="79.8840625" y1="15.9766" x2="80.4147375" y2="15.445925" width="0.3048" layer="16"/>
 </signal>
-<signal name="GPIO14">
+<signal name="RED">
 <contactref element="U8000" pad="5"/>
 <contactref element="R8022" pad="1"/>
 <via x="12.192" y="11.684" extent="1-16" drill="0.3048"/>
@@ -2911,7 +2911,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <signal name="MOSI">
 <contactref element="U8000" pad="21"/>
 </signal>
-<signal name="GPIO2">
+<signal name="BLUE">
 <contactref element="U8000" pad="11"/>
 <contactref element="R8020" pad="1"/>
 <wire x1="49.18" y1="1.3895" x2="49.18" y2="2.8758" width="0.3048" layer="1"/>

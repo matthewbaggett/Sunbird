@@ -26064,7 +26064,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="152.4" y="63.5" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GPIO16" class="0">
+<net name="GREEN" class="0">
 <segment>
 <pinref part="U8000" gate="G$1" pin="GPIO16"/>
 <wire x1="55.88" y1="106.68" x2="68.58" y2="106.68" width="0.1524" layer="91"/>
@@ -26134,7 +26134,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <label x="58.42" y="99.06" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="GPIO14" class="0">
+<net name="RED" class="0">
 <segment>
 <pinref part="U8000" gate="G$1" pin="GPIO14"/>
 <wire x1="68.58" y1="104.14" x2="55.88" y2="104.14" width="0.1524" layer="91"/>
@@ -26213,7 +26213,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <pinref part="GND16" gate="1" pin="GND"/>
 </segment>
 </net>
-<net name="GPIO2" class="0">
+<net name="BLUE" class="0">
 <segment>
 <pinref part="U8000" gate="G$1" pin="GPIO2"/>
 <wire x1="101.6" y1="101.6" x2="116.84" y2="101.6" width="0.1524" layer="91"/>
