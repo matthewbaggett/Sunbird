@@ -173,7 +173,7 @@
 <rectangle x1="0" y1="17.78" x2="111" y2="19.05" layer="39"/>
 <rectangle x1="0" y1="0" x2="111" y2="1.27" layer="39"/>
 <rectangle x1="81" y1="0" x2="111" y2="19.05" layer="40"/>
-<text x="1.016" y="12.7" size="3.81" layer="25">SUNBIRD</text>
+<text x="6.604" y="9.652" size="3.81" layer="25" rot="R15">SUNBIRD</text>
 </plain>
 <libraries>
 <library name="SparkFun-Batteries" urn="urn:adsk.eagle:library:508">
