@@ -1,0 +1,48 @@
+.logo{
+    position: relative;
+    height: 144px;
+    width: 144px;
+}
+
+.logo .backing,
+.logo .donger,
+.logo .hat {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo .backing{
+
+}
+
+.logo .donger{
+    transform: rotate(45deg);
+}
+
+.logo .hat{
+    display: none;
+    width: 50%;
+    height: 50%;
+    left: 46%;
+    top: -11%;
+    transform: rotate(10deg);
+}
+.logo .hat.hat2{
+    top: -8%;
+}
+.logo .hat.hat3{
+    top: -3%;
+    left: 45%;
+}
+.logo .hat.hat4{
+    top: -6%;
+    left: 47%;
+    transform: rotate(18deg);
+}
+
+.form-signin .logo{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
