@@ -23,6 +23,16 @@ void heartBeat(){
   // Server-client remote control stuff here.
 }
 
+void sendDebugUDP(){
+  float vcc = getVoltage();
+  freeHeap = ESP.getFreeHeap();
+  debug.printf(
+    "Vcc: %f volts\nHeapFree: %d bytes", 
+    vcc, 
+    freeHeap
+  );
+}
+
 void oneHz(){
     if(oneHzCounter % heartbeatIntervalSeconds == 0 || oneHzCounter == 0){
       heartBeat();
@@ -31,11 +41,7 @@ void oneHz(){
       String wifiReport = scanWifiNetworks();
       Serial.print(wifiReport);
     }
-    vcc = updateADC();
-    freeHeap = ESP.getFreeHeap();
-    Serial.print("Voltage: ");
-    Serial.println(vcc);
-    debug.printf("Vcc: %d\n", vcc);
+    sendDebugUDP();
     oneHzCounter++;
 }
 

@@ -1,4 +1,5 @@
 #define ADC_SAMPLE_EN 5
+#define ADC_VOLTAGE_MULTIPLIER 0.00322265625
 int adcValue;
 
 bool sample_adc_en = false;
@@ -32,5 +33,9 @@ int updateADC(){
   adcValue = analogRead(A0);
   ADCDisableSample();
   return adcValue;
+}
+
+float getVoltage() {
+  return updateADC() * ADC_VOLTAGE_MULTIPLIER;
 }
 
