@@ -33,7 +33,9 @@ void oneHz(){
     }
     vcc = updateADC();
     freeHeap = ESP.getFreeHeap();
-    debug.printf("Vcc: %d", vcc);
+    Serial.print("Voltage: ");
+    Serial.println(vcc);
+    debug.printf("Vcc: %d\n", vcc);
     oneHzCounter++;
 }
 

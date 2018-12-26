@@ -1,9 +1,7 @@
-//const char *ssid = "Plugnet";
-//const char *password = "UntilPrinciplePlasticEgg";
-const char *ssid = "FoxWLAN";
-const char *password = "f0xe$ftw";
+const char *ssid = "Plugnet";
+const char *password = "UntilPrinciplePlasticEgg";
 
-int pwmHz = 10;
+int pwmHz = 100;
 int vcc;
 int freeHeap;
 

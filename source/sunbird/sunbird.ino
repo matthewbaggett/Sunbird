@@ -6,8 +6,6 @@
 #include "FS.h"
 #include <ArduinoJson.h>
 #include <Wire.h>
-#include <Adafruit_GFX.h>
-#include <Adafruit_SSD1306.h>
 #include "config.h"
 #include "connectivity.h"
 #include "debug.h"
@@ -47,6 +45,7 @@ void setup(void) {
   setupLed();
   setupADC();
   setupLCD();
+  testLCD();
   setupMotor();
   setupTimers();
   setupWifi();

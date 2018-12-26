@@ -80,7 +80,7 @@ void Debugger::printf(const char* fmt, ...){
             }
         } else {
             _serial->print(fmt[i]);
-            _serial->print("\n");
+            //_serial->print("\n");
             _udp.print(fmt[i]);
         }
     }

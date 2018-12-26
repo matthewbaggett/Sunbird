@@ -33,7 +33,7 @@ void setupWifi(){
   }
   
   Serial.println("");
-  Serial.printf("Connected to %s.", ssid);
+  Serial.printf("Connected to %s.\n", ssid);
   Serial.print("Ip address: ");
   Serial.println(WiFi.localIP());
   for(int b = 0; b < 5; b++){
