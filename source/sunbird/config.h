@@ -4,7 +4,7 @@ char *password = "UntilPrinciplePlasticEgg";
 
 bool softApEnabled=true;
 bool softApSecurityEnabled=false;
-char *softApSSID="Buttplug";
+char *softApSSID="bplg";
 char *softApSecret="secret";
 IPAddress softApIp(10,69,69,1);
 IPAddress softApGateway(10,69,69,1);
