@@ -3,6 +3,10 @@
 #define SLEEP_BREATH_DIVISOR 25
 #define SLEEP_BREATH_MAX_BRIGHTNESS_DIVISOR 0.5
 
+extern "C" {
+#include "user_interface.h"
+}
+
 unsigned long lastOneHz = 0;
 unsigned long lastSixtyHz = 0;
 unsigned long lastMotorHz = 0;

@@ -5,53 +5,48 @@
 #include <ESP8266mDNS.h>
 #include "FS.h"
 #include <ArduinoJson.h>
-
-const char *ssid = "Plugnet";
-const char *password = "UntilPrinciplePlasticEgg";
-
-int pwmHz = 10;
-int vcc;
-int freeHeap;
-
-#define STATE_OFF 0
-#define STATE_SLEEP 1
-#define STATE_ACTIVE 10
-
-int state = STATE_OFF;
-
-ESP8266WebServer server(80);
-
-// Multicast declarations
-IPAddress ipMulti(239, 0, 0, 57);
-unsigned int portMulti = 12345;      // local port to listen on
-WiFiUDP udp;
-
-//ADC_MODE(ADC_VCC);
-
+#include <Wire.h>
+#include <Adafruit_GFX.h>
+#include <Adafruit_SSD1306.h>
+#include "config.h"
+#include "connectivity.h"
 #include "debug.h"
-Debugger debug(Serial, udp);
-
 #include "adc.h"
+#include "display.h"
 #include "flash.h"
 #include "led.h"
 #include "motor.h"
 #include "pages.h"
 #include "wifi.h"
-#include "timers.h"
-
+#include "timers.h" 
 
 void setup(void) {
-  // Very first thing we gotta do is setup serial & pwm.
+  // Very first thing we gotta do is setup serial, pwm & i2c.
   Serial.begin(115200);
-  analogWriteFreq(pwmHz);
   delay(100);
   Serial.println("");
+  Serial.println("Starting DongOS...");
   Serial.println("");
-  Serial.println("");
+  
+  // PWM service startup
+  Serial.print("Starting PWM service at ");
+  Serial.print(pwmHz);
+  Serial.print("hz");
+  analogWriteFreq(pwmHz);
+  Serial.println(" ... [DONE]");
 
+  // i2c service startup
+  Serial.print("Starting i2c service on SDA=");
+  Serial.print(I2C_SDA);
+  Serial.print(" SCL=");
+  Serial.print(I2C_SCL);
+  Wire.begin(I2C_SDA, I2C_SCL);
+  Serial.println(" ... [DONE]");
+  
   // Setup critical systems
   setupLed();
   setupADC();
+  setupLCD();
   setupMotor();
   setupTimers();
   setupWifi();

@@ -88,4 +88,6 @@ void Debugger::printf(const char* fmt, ...){
     _udp.endPacket();
 }
 
+Debugger debug(Serial, udp);
+
 
