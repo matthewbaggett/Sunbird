@@ -1,5 +1,3 @@
-
-
 String availableWifiNetworkStatement;
 
 String scanWifiNetworks(){
@@ -19,9 +17,21 @@ String scanWifiNetworks(){
   return availableWifiNetworkStatement;
 }
 
+void setupWifi_AP(){
+  console.printf("Creating AP %s ", softApSSID);
+  Serial.printf("Creating AP %s ", softApSSID);
+  WiFi.softAP(softApSSID, softApSecret);
+  console.println("[OK]");
+  Serial.println("[OK]");
+  IPAddress apIP = WiFi.softAPIP();
+  Serial.print("IP address: ");
+  Serial.println(WiFi.localIP());
+}
+
 void setupWifi(){
   ledColour(255,0,0);
-  WiFi.mode(WIFI_STA);
+  WiFi.mode(WIFI_AP_STA);
+  setupWifi_AP();
   Serial.printf("Connecting to: %s\n", ssid);
   console.printf("Connecting %s ", ssid);
   WiFi.begin(ssid, password);
@@ -51,7 +61,7 @@ void setupWifi(){
   ledColour(0,0,0);
 
   console.printf("Start MDNS ");
-  if (MDNS.begin("esp8266")) {
+  if (MDNS.begin(MDNS_NAME)) {
     console.println("[OK]");
     Serial.printf("MDNS responder started\n");
   }else{

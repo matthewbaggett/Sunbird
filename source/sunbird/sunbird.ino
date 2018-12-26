@@ -30,7 +30,6 @@ void setupSerial(){
 void setup(void) {
   setupSerial();
   setupI2C();
-  
   setupLCD();
   console.println("Start DongOS..");
   checkFlash();

@@ -1,5 +1,7 @@
 const char *ssid = "Plugnet";
 const char *password = "UntilPrinciplePlasticEgg";
+const char *softApSSID="Buttplug";
+const char *softApSecret="secret";
 
 int pwmHz = 100;
 int vcc;
@@ -17,6 +19,7 @@ int state = STATE_OFF;
 
 #define MULTICAST_PORT 12345
 #define WEBSERVER_PORT 80
+#define MDNS_NAME "Buttplug"
 IPAddress ipMulti(239, 0, 0, 57);
 unsigned int portMulti = MULTICAST_PORT;      // local port to listen on
 WiFiUDP udp;

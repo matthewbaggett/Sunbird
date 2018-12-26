@@ -27,8 +27,9 @@ void setupLCD() {
     else
       Serial.printf("Invalid font selected: %d", OLED_FONT);
     ssd1306_clearScreen();
+    Serial.println("[OK]");
   }else{
-        Serial.println("[SKIPPED, not detected]");
+    Serial.println("[SKIPPED, not detected]");
   }
 }
 
