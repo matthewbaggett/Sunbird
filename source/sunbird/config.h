@@ -10,9 +10,9 @@ int freeHeap;
 #define STATE_ACTIVE 10
 int state = STATE_OFF;
 
-#define I2C_SDA 3
-#define I2C_SCL 4
-#define OLED_I2C_ADDRESS 0x78
+#define I2C_SDA 4
+#define I2C_SCL 5
+#define OLED_I2C_ADDRESS 0x3C
 
 #define MULTICAST_PORT 12345
 #define WEBSERVER_PORT 80

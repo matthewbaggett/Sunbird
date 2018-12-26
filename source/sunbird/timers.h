@@ -33,15 +33,34 @@ void sendDebugUDP(){
   );
 }
 
+void everyMinute() {
+  sendDebugUDP();
+}
+
+void everyFiveMinutes() {
+  
+}
+
 void oneHz(){
+    
     if(oneHzCounter % heartbeatIntervalSeconds == 0 || oneHzCounter == 0){
       heartBeat();
     }
+    
+    if(oneHzCounter % 60 == 0 || oneHzCounter == 0){
+      everyMinute();
+    }
+    
+    if(oneHzCounter % 60 == 0 || oneHzCounter == 0){
+      everyFiveMinutes();
+    }
+    
     if(oneHzCounter % wifiScanIntervalSeconds == 0 || oneHzCounter == 0){
       String wifiReport = scanWifiNetworks();
       Serial.print(wifiReport);
     }
-    sendDebugUDP();
+    
+    //sendDebugUDP();
     oneHzCounter++;
 }
 

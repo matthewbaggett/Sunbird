@@ -12,6 +12,7 @@
 #include "adc.h"
 #include "display.h"
 #include "flash.h"
+#include "i2c.h"
 #include "led.h"
 #include "motor.h"
 #include "pages.h"
@@ -38,14 +39,17 @@ void setup(void) {
   Serial.print(I2C_SDA);
   Serial.print(" SCL=");
   Serial.print(I2C_SCL);
-  Wire.begin(I2C_SDA, I2C_SCL);
+  //Wire.begin(I2C_SDA, I2C_SCL);
   Serial.println(" ... [DONE]");
   
   // Setup critical systems
   setupLed();
   setupADC();
   setupLCD();
-  testLCD();
+  while(true){
+    i2cScan();
+    testLCD();
+  }
   setupMotor();
   setupTimers();
   setupWifi();
