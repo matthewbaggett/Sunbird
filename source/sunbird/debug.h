@@ -4,25 +4,22 @@
 
 class Debugger{
   public:
-    Debugger(Stream &serial, WiFiUDP _udp, Ssd1306Console &console);
+    Debugger(Stream &serial, WiFiUDP _udp);
     void print(const char* chars);
     void printf(const char* fmt, ...);
     void println(const char* fmt, ...);
   private:
     Stream *_serial;
     WiFiUDP _udp;
-    Ssd1306Console *_console;
 };
 
-Debugger::Debugger(Stream &serial, WiFiUDP udp, Ssd1306Console &console){
+Debugger::Debugger(Stream &serial, WiFiUDP udp){
   _serial = &serial;
   _udp = udp;
-  _console = &console;
 }
 
 void Debugger::print(const char* chars){
   _serial->print(chars);
-  _console->print(chars);
 }
 
 void Debugger::printf(const char* fmt, ...){

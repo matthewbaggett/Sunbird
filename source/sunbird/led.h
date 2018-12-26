@@ -73,9 +73,9 @@ void testLed(){
 }
 void setupPWM(){
   // PWM service startup
-  console.printf("Start PWM@%dhz: ", pwmHz);
+  ////console.printf("Start PWM@%dhz: ", pwmHz);
   analogWriteFreq(pwmHz);
-  console.println("[OK]");
+  ////console.println("[OK]");
 }
 void setupLed(){
   pinMode(LED_RED, OUTPUT);

@@ -21,7 +21,7 @@ void setupWifi_AP() {
   if (!softApEnabled) {
     return;
   }
-  console.printf("Creating AP %s ", softApSSID);
+  //console.printf("Creating AP %s ", softApSSID);
   Serial.printf("Creating AP %s ", softApSSID);
   WiFi.softAPConfig(softApIp, softApGateway, softApSubnet);
   bool apSuccess = false;
@@ -31,16 +31,16 @@ void setupWifi_AP() {
     apSuccess = WiFi.softAP(softApSSID);
   }
   if (apSuccess) {
-    console.println("[OK]");
+    //console.println("[OK]");
     Serial.println("[OK]");
   } else {
-    console.println("[FAIL]");
+    //console.println("[FAIL]");
     Serial.println("[FAIL]");
   }
   IPAddress apIP = WiFi.softAPIP();
-  console.print("AP IP address: ");
+  //console.print("AP IP address: ");
   Serial.print("AP IP address: ");
-  console.println(WiFi.softAPIP());
+  //console.println(WiFi.softAPIP());
   Serial.println(WiFi.softAPIP());
 }
 
@@ -49,7 +49,7 @@ void setupWifi_Client() {
     return;
   }
   Serial.printf("Connecting to: %s\n", ssid);
-  console.printf("Connecting %s ", ssid);
+  //console.printf("Connecting %s ", ssid);
   WiFi.begin(ssid, password);
 
   // Wait for connection
@@ -63,11 +63,11 @@ void setupWifi_Client() {
 
   Serial.println("");
   Serial.printf("Connected to %s.\n", ssid);
-  console.println("[OK]");
+  //console.println("[OK]");
   Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
-  console.print("IP: ");
-  console.println(WiFi.localIP());
+  //console.print("IP: ");
+  //console.println(WiFi.localIP());
   for (int b = 0; b < 5; b++) {
     ledColour(0, 0, 0);
     delay(30);
@@ -79,12 +79,12 @@ void setupWifi_Client() {
 
 void setupWifi_MDNS() {
   if (enableMDNS) {
-    console.printf("Start MDNS ");
+    //console.printf("Start MDNS ");
     if (MDNS.begin(mdnsName)) {
-      console.println("[OK]");
+      //console.println("[OK]");
       Serial.printf("MDNS responder started\n");
     } else {
-      console.println("[FAIL]");
+      //console.println("[FAIL]");
     }
   }
 }

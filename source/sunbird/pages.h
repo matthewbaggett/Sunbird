@@ -53,20 +53,15 @@ void handleDashboard() {
 }
 
 void handleLoginAction() {
-
-  Serial.print("args:");
-  Serial.println(server.args());
-  Serial.print("Login attempt as: ");
-  Serial.print(server.arg("username"));
-  Serial.print(" / ");
-  Serial.print(server.arg("password"));
-  Serial.println();
+  
+  Serial.printf("Login attempt as: %s / %s", server.arg("username").c_str(), server.arg("password").c_str());
+  ////console.printf("Login attempt as: %s / %s", server.arg("username").c_str(), server.arg("password").c_str());
 
   StaticJsonBuffer<400> jsonBuffer;
   SPIFFS.begin();
   File authFile = SPIFFS.open("/auth.json", "r");
   if (!authFile) {
-    Serial.println("Cannot open auth.json");
+    Serial.println("[FAIL Cannot open auth.json]");
     server.sendHeader("Location", "/login?error=Cannot open auth.json");
     server.send(301);
   }
@@ -80,7 +75,7 @@ void handleLoginAction() {
 
   // Test if parsing succeeds.
   if (!validUsers.success()) {
-    Serial.println("Auth parseObject() failed");
+    Serial.println("[FAIL Auth parseObject() failed]");
     server.sendHeader("Location", "/login?error=Auth parseObject() failed");
     server.send(301);
     return;
@@ -104,11 +99,13 @@ void handleLoginAction() {
   authFile.close();
   if(loginSuccess){
     Serial.println("Login success, set cookie");
+    ////console.println(" [SUCCESS]");
     server.sendHeader("Cache-Control", "no-cache");
     server.sendHeader("Set-Cookie", "ESPSESSIONID=1; Path=/; Max-Age=86400");
     server.sendHeader("Location", "/dashboard");
     server.send(301);
   }else{
+    //console.println(" [BAD AUTH]");
     server.sendHeader("Location", "/login?error=Login Invalid");
     server.send(301);
   }
@@ -209,11 +206,11 @@ void drawGraph() {
 }
 
 void setupHttp(){
-  console.printf("Mount FS ");
+  //console.printf("Mount FS ");
   if(SPIFFS.begin()){
-    console.println("[OK]");
+    //console.println("[OK]");
   }else{
-    console.println("[FAIL]");
+    //console.println("[FAIL]");
   }
  
   server.serveStatic("/css", SPIFFS, "/css");
@@ -238,9 +235,9 @@ void setupHttp(){
   //ask server to track these headers
   server.collectHeaders(headerkeys, headerkeyssize);
 
-  console.printf("Start HTTPd port %d ", WEBSERVER_PORT);
+  //console.printf("Start HTTPd port %d ", WEBSERVER_PORT);
   server.begin();
-  console.println("[OK]");
+  //console.println("[OK]");
   Serial.println("HTTP server started");
 }
 

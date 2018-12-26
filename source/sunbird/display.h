@@ -1,53 +1,117 @@
-#include "ssd1306.h"
-#include "ssd1306_console.h"
-#include "ssd1306_fonts.h"
-#include "intf/i2c/ssd1306_i2c.h"
+#include <Wire.h>  
+#include "SSD1306Wire.h"
+#include "OLEDDisplayUi.h"
 #include "i2c.h"
+#include "images.h"
 
-Ssd1306Console console;
+SSD1306Wire display(OLED_I2C_ADDRESS, I2C_SDA, I2C_SCL);
+OLEDDisplayUi ui( &display );
+    
+void msOverlay(OLEDDisplay *display, OLEDDisplayUiState* state) {
+  display->setTextAlignment(TEXT_ALIGN_RIGHT);
+  display->setFont(ArialMT_Plain_10);
+  display->drawString(128, 0, String(millis()));
+}
+
+void drawFrame1(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
+  // draw an xbm image.
+  // Please note that everything that should be transitioned
+  // needs to be drawn relative to x and y
+
+  display->drawXbm(x + 34, y + 14, WiFi_Logo_width, WiFi_Logo_height, WiFi_Logo_bits);
+}
+
+void drawFrame2(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
+  // Demonstrates the 3 included default sizes. The fonts come from SSD1306Fonts.h file
+  // Besides the default fonts there will be a program to convert TrueType fonts into this format
+  display->setTextAlignment(TEXT_ALIGN_LEFT);
+  display->setFont(ArialMT_Plain_10);
+  display->drawString(0 + x, 10 + y, "Arial 10");
+
+  display->setFont(ArialMT_Plain_16);
+  display->drawString(0 + x, 20 + y, "Arial 16");
+
+  display->setFont(ArialMT_Plain_24);
+  display->drawString(0 + x, 34 + y, "Arial 24");
+}
+
+void drawFrame3(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
+  // Text alignment demo
+  display->setFont(ArialMT_Plain_10);
+
+  // The coordinates define the left starting point of the text
+  display->setTextAlignment(TEXT_ALIGN_LEFT);
+  display->drawString(0 + x, 11 + y, "Left aligned (0,10)");
+
+  // The coordinates define the center of the text
+  display->setTextAlignment(TEXT_ALIGN_CENTER);
+  display->drawString(64 + x, 22 + y, "Center aligned (64,22)");
+
+  // The coordinates define the right end of the text
+  display->setTextAlignment(TEXT_ALIGN_RIGHT);
+  display->drawString(128 + x, 33 + y, "Right aligned (128,33)");
+}
+
+void drawFrame4(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
+  // Demo for drawStringMaxWidth:
+  // with the third parameter you can define the width after which words will be wrapped.
+  // Currently only spaces and "-" are allowed for wrapping
+  display->setTextAlignment(TEXT_ALIGN_LEFT);
+  display->setFont(ArialMT_Plain_10);
+  display->drawStringMaxWidth(0 + x, 10 + y, 128, "Lorem ipsum\n dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore.");
+}
+
+void drawFrame5(OLEDDisplay *display, OLEDDisplayUiState* state, int16_t x, int16_t y) {
+
+}
+
+// This array keeps function pointers to all frames
+// frames are the single views that slide in
+FrameCallback frames[] = { drawFrame1, drawFrame2, drawFrame3, drawFrame4, drawFrame5 };
+
+// how many frames are there?
+int frameCount = 5;
+
+// Overlays are statically drawn on top of a frame eg. a clock
+OverlayCallback overlays[] = { msOverlay };
+int overlaysCount = 1;
+
 
 void setupLCD() {
   Serial.printf("Starting up oled service at i2c address %#04x... ", OLED_I2C_ADDRESS);
-  if(i2cDeviceExists(OLED_I2C_ADDRESS) || true){
-    /* Select the font to use with menu and all font functions */
-    ssd1306_setFixedFont(ssd1306xled_font6x8);
   
-    ssd1306_128x64_i2c_initEx(I2C_SCL, I2C_SDA, SSD1306_SA);
-    ssd1306_128x64_init();
+  // The ESP is capable of rendering 60fps in 80Mhz mode
+  // but that won't give you much time for anything else
+  // run it in 160Mhz mode or just set it to 30 fps
+  ui.setTargetFPS(30);
+
+  // Customize the active and inactive symbol
+  ui.setActiveSymbol(activeSymbol);
+  ui.setInactiveSymbol(inactiveSymbol);
+
+  // You can change this to
+  // TOP, LEFT, BOTTOM, RIGHT
+  ui.setIndicatorPosition(BOTTOM);
+
+  // Defines where the first frame is located in the bar.
+  ui.setIndicatorDirection(LEFT_RIGHT);
+
+  // You can change the transition that is used
+  // SLIDE_LEFT, SLIDE_RIGHT, SLIDE_UP, SLIDE_DOWN
+  ui.setFrameAnimation(SLIDE_LEFT);
+
+  // Add frames
+  ui.setFrames(frames, frameCount);
+
+  // Add overlays
+  ui.setOverlays(overlays, overlaysCount);
+
+  // Initialising the UI will init the display too.
+  ui.init();
+
+  display.flipScreenVertically();
+
+  Serial.println("[OK]");
   
-    //ssd1306_128x64_i2c_init();
-    const int canvasWidth = 128; // Width must be power of 2, i.e. 16, 32, 64, 128...
-    const int canvasHeight = 64; // Height must be divided on 8, i.e. 8, 16, 24, 32...
-    uint8_t canvasData[canvasWidth*(canvasHeight/8)];
-    /* Create canvas object */
-    if(OLED_FONT == 6)
-      ssd1306_setFixedFont(ssd1306xled_font6x8);
-    else if(OLED_FONT == 5)
-      ssd1306_setFixedFont(digital_font5x7_AB);
-    else
-      Serial.printf("Invalid font selected: %d", OLED_FONT);
-    ssd1306_clearScreen();
-    Serial.println("[OK]");
-  }else{
-    Serial.println("[SKIPPED, not detected]");
-  }
 }
-
-void testLCD() {
-    Serial.printf("Starting LCD Test");
-    ssd1306_setFixedFont(ssd1306xled_font6x8);
-    ssd1306_clearScreen();
-    ssd1306_printFixed(0,  8, "Normal text", STYLE_NORMAL);
-    ssd1306_printFixed(0, 16, "Bold text", STYLE_BOLD);
-    ssd1306_printFixed(0, 24, "Italic text", STYLE_ITALIC);
-    ssd1306_negativeMode();
-    ssd1306_printFixed(0, 32, "Inverted bold", STYLE_BOLD);
-    ssd1306_positiveMode();
-    delay(3000);
-    ssd1306_clearScreen();
-    ssd1306_printFixedN(0, 0, "N3", STYLE_NORMAL, FONT_SIZE_8X);
-    delay(3000);
-    Serial.printf("LCD Test complete.");
-}
-
 

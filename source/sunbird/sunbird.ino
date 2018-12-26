@@ -9,9 +9,10 @@
 #include "config.h"
 #include "display.h"
 #include "debug.h"
-Debugger debug(Serial, udp, console);
+Debugger debug(Serial, udp);
 
 #include "adc.h"
+#include "console.h"
 #include "flash.h"
 #include "i2c.h"
 #include "led.h"
@@ -31,7 +32,7 @@ void setup(void) {
   setupSerial();
   setupI2C();
   setupLCD();
-  console.println("Start DongOS..");
+  //////console.println("Start DongOS..");
   checkFlash();
   setupPWM();
   setupLed();
@@ -60,7 +61,18 @@ void loop(void) {
     checkOneHz();
     tickOccured = false;
   }
+  
   server.handleClient();
   yield();
+  
+  int remainingTimeBudget = ui.update();
+
+  if (remainingTimeBudget > 0) {
+    // You can do some work here
+    // Don't do stuff if you are below your
+    // time budget.
+    delay(remainingTimeBudget);
+  }
+  
 }
 

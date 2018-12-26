@@ -1,14 +1,14 @@
 void checkFlash(){
   // Flash size check
-  console.print("Checking Flash: ");
+  ////console.print("Checking Flash: ");
   uint32_t realSize = ESP.getFlashChipRealSize();
   uint32_t ideSize = ESP.getFlashChipSize();
   FlashMode_t ideMode = ESP.getFlashChipMode();
   
   if(ideSize != realSize) {
-    console.printf("\nWrong flash, real flash is %dMB [WARN]\n", realSize/1000000);
+    ////console.printf("\nWrong flash, real flash is %dMB [WARN]\n", realSize/1000000);
   } else {
-    console.println("[OK]");
+    ////console.println("[OK]");
   }
 }
 void testFlash(){
