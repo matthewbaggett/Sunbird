@@ -27,7 +27,7 @@ void sendDebugUDP(){
   float vcc = getVoltage();
   freeHeap = ESP.getFreeHeap();
   debug.printf(
-    "Vcc: %f volts\nHeapFree: %d bytes", 
+    "Vcc: %f volts\nHeapFree: %d bytes\n", 
     vcc, 
     freeHeap
   );
@@ -55,7 +55,7 @@ void oneHz(){
       everyFiveMinutes();
     }
     
-    if(oneHzCounter % wifiScanIntervalSeconds == 0 || oneHzCounter == 0){
+    if(enableWifiScanning && (oneHzCounter % wifiScanIntervalSeconds == 0 || oneHzCounter == 0)) {
       String wifiReport = scanWifiNetworks();
       Serial.print(wifiReport);
     }
@@ -81,15 +81,6 @@ void sixtyHz(){
         wave = wave * -1;
       }
       double sleepBrightness = 255 * wave * SLEEP_BREATH_MAX_BRIGHTNESS_DIVISOR;
-      /*Serial.print("SixtyHz: ");
-      Serial.print(sixtyHzCounter);
-      Serial.print(" Counter: ");
-      Serial.print(counter);
-      Serial.print(" Cos: ");
-      Serial.print(wave);
-      Serial.print(" Brightness: ");
-      Serial.println(sleepBrightness);*/
-      
       ledColour(sleepBrightness, 0, sleepBrightness);
   }
   sixtyHzCounter++;
