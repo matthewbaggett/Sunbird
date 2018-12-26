@@ -1,3 +1,7 @@
+#include <ESP8266WebServer.h>
+
+ESP8266WebServer server(WEBSERVER_PORT);
+
 void handleLogin() {
   SPIFFS.begin();
   ledColour(0,0,255);
@@ -204,10 +208,13 @@ void drawGraph() {
   server.send(200, "image/svg+xml", out);
 }
 
-
-
 void setupHttp(){
-  SPIFFS.begin();
+  console.printf("Mount FS ");
+  if(SPIFFS.begin()){
+    console.println("[OK]");
+  }else{
+    console.println("[FAIL]");
+  }
  
   server.serveStatic("/css", SPIFFS, "/css");
   server.serveStatic("/js", SPIFFS, "/js");
@@ -230,8 +237,10 @@ void setupHttp(){
   size_t headerkeyssize = sizeof(headerkeys) / sizeof(char*);
   //ask server to track these headers
   server.collectHeaders(headerkeys, headerkeyssize);
-  
+
+  console.printf("Start HTTPd port %d ", WEBSERVER_PORT);
   server.begin();
+  console.println("[OK]");
   Serial.println("HTTP server started");
 }
 

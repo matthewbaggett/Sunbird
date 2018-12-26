@@ -1,4 +1,12 @@
+#ifndef I2C_H
+#define I2C_H
 
+void setupI2C(){
+  // i2c service startup
+  Serial.printf("Starting i2c service on SDA=%d SCL=%d ... ", I2C_SDA, I2C_SCL);
+  //Wire.begin(I2C_SDA, I2C_SCL);
+  Serial.println("[DONE]");
+}
 void i2cScan(){
   byte error, address;
   int nDevices;
@@ -26,3 +34,13 @@ void i2cScan(){
   }
 }
 
+bool i2cDeviceExists(byte address){
+  Wire.beginTransmission(address);
+   if (Wire.endTransmission() == 0){
+    return true;
+  }else{
+    return false;   
+  }
+}
+
+#endif

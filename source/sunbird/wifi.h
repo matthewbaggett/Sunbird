@@ -1,3 +1,5 @@
+
+
 String availableWifiNetworkStatement;
 
 String scanWifiNetworks(){
@@ -21,6 +23,7 @@ void setupWifi(){
   ledColour(255,0,0);
   WiFi.mode(WIFI_STA);
   Serial.printf("Connecting to: %s\n", ssid);
+  console.printf("Connecting %s ", ssid);
   WiFi.begin(ssid, password);
 
   // Wait for connection
@@ -34,8 +37,11 @@ void setupWifi(){
   
   Serial.println("");
   Serial.printf("Connected to %s.\n", ssid);
-  Serial.print("Ip address: ");
+  console.println("[OK]");
+  Serial.print("IP address: ");
   Serial.println(WiFi.localIP());
+  console.print("IP: ");
+  console.println(WiFi.localIP());
   for(int b = 0; b < 5; b++){
     ledColour(0,0,0);
     delay(30);
@@ -44,7 +50,11 @@ void setupWifi(){
   }
   ledColour(0,0,0);
 
+  console.printf("Start MDNS ");
   if (MDNS.begin("esp8266")) {
+    console.println("[OK]");
     Serial.printf("MDNS responder started\n");
+  }else{
+    console.println("[FAIL]");
   }
 }
