@@ -22,11 +22,11 @@ int freeHeap;
 #define STATE_ACTIVE 10
 int state = STATE_OFF;
 
-
 #define I2C_SDA 4
 #define I2C_SCL 5
 #define OLED_I2C_ADDRESS 0x3C
 #define OLED_FONT 6 // Either 5 for 5x7 or 6 for 6x8
+#define OLED_DISPLAY_FPS 30
 
 #define MULTICAST_PORT 12345
 #define WEBSERVER_PORT 80

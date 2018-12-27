@@ -3,6 +3,7 @@
 #include <WiFiUdp.h>
 #include <ESP8266WebServer.h>
 #include <ESP8266mDNS.h>
+#include <ArduinoOTA.h>
 #include "FS.h"
 #include <ArduinoJson.h>
 #include <Wire.h>
@@ -17,6 +18,7 @@ Debugger debug(Serial, udp);
 #include "i2c.h"
 #include "led.h"
 #include "motor.h"
+#include "ota.h"
 #include "pages.h"
 #include "wifi.h"
 #include "timers.h" 
@@ -41,6 +43,7 @@ void setup(void) {
   setupTimers();
   setupWifi();
   setupHttp();
+  setupOTA();
 
   // LED off.
   ledColour(0,0,0);
@@ -63,6 +66,7 @@ void loop(void) {
   }
   
   server.handleClient();
+  ArduinoOTA.handle();
   yield();
   
   int remainingTimeBudget = ui.update();
