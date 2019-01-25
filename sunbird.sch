@@ -1339,56 +1339,6 @@ BATTERY</description>
 <rectangle x1="0.7" y1="0.8" x2="1.2" y2="1.4" layer="51"/>
 <rectangle x1="-1.2" y1="0.8" x2="-0.7" y2="1.4" layer="51"/>
 </package>
-<package name="MDFN-10L_3X3">
-<smd name="P$1" x="-1.225" y="1" dx="0.35" dy="0.45" layer="1" rot="R90"/>
-<smd name="P$2" x="-1.225" y="0.5" dx="0.35" dy="0.45" layer="1" rot="R90"/>
-<smd name="P$3" x="-1.225" y="0" dx="0.35" dy="0.45" layer="1" rot="R90"/>
-<smd name="P$4" x="-1.225" y="-0.5" dx="0.35" dy="0.45" layer="1" rot="R90"/>
-<smd name="P$5" x="-1.225" y="-1" dx="0.35" dy="0.45" layer="1" rot="R90"/>
-<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="21"/>
-<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
-<wire x1="-0.5" y1="0.5" x2="0" y2="1" width="0.127" layer="21"/>
-<wire x1="0" y1="1" x2="0.5" y2="1" width="0.127" layer="21"/>
-<wire x1="0.5" y1="1" x2="0.5" y2="-1" width="0.127" layer="21"/>
-<wire x1="0.5" y1="-1" x2="-0.5" y2="-1" width="0.127" layer="21"/>
-<wire x1="-0.5" y1="-1" x2="-0.5" y2="0.5" width="0.127" layer="21"/>
-<text x="-1.5" y="1.75" size="0.3048" layer="21">&gt;NAME</text>
-<text x="-1.5" y="-2" size="0.3048" layer="21">&gt;VALUE</text>
-<smd name="P$6" x="1.225" y="-1" dx="0.35" dy="0.45" layer="1" rot="R270"/>
-<smd name="P$7" x="1.225" y="-0.5" dx="0.35" dy="0.45" layer="1" rot="R270"/>
-<smd name="P$8" x="1.225" y="0" dx="0.35" dy="0.45" layer="1" rot="R270"/>
-<smd name="P$9" x="1.225" y="0.5" dx="0.35" dy="0.45" layer="1" rot="R270"/>
-<smd name="P$10" x="1.225" y="1" dx="0.35" dy="0.45" layer="1" rot="R270"/>
-</package>
-<package name="WSON6_NOPAD">
-<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="21"/>
-<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
-<smd name="P$1" x="-1.4" y="1" dx="0.6" dy="0.4" layer="1"/>
-<smd name="P$2" x="-1.4" y="0" dx="0.6" dy="0.4" layer="1"/>
-<smd name="P$3" x="-1.4" y="-1" dx="0.6" dy="0.4" layer="1"/>
-<smd name="P$4" x="1.4" y="-1" dx="0.6" dy="0.4" layer="1" rot="R180"/>
-<smd name="P$5" x="1.4" y="0" dx="0.6" dy="0.4" layer="1" rot="R180"/>
-<smd name="P$6" x="1.4" y="1" dx="0.6" dy="0.4" layer="1" rot="R180"/>
-<circle x="-2" y="2" radius="0.25" width="0.127" layer="21"/>
-</package>
-<package name="WSON6_PAD">
-<wire x1="-1.5" y1="1.5" x2="1.5" y2="1.5" width="0.127" layer="21"/>
-<wire x1="1.5" y1="1.5" x2="1.5" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
-<wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
-<smd name="PAD" x="0" y="0" dx="1.5" dy="2.4" layer="1"/>
-<smd name="P$1" x="-1.4" y="1" dx="0.6" dy="0.4" layer="1"/>
-<smd name="P$2" x="-1.4" y="0" dx="0.6" dy="0.4" layer="1"/>
-<smd name="P$3" x="-1.4" y="-1" dx="0.6" dy="0.4" layer="1"/>
-<smd name="P$4" x="1.4" y="-1" dx="0.6" dy="0.4" layer="1" rot="R180"/>
-<smd name="P$5" x="1.4" y="0" dx="0.6" dy="0.4" layer="1" rot="R180"/>
-<smd name="P$6" x="1.4" y="1" dx="0.6" dy="0.4" layer="1" rot="R180"/>
-<circle x="-2" y="2" radius="0.25" width="0.127" layer="21"/>
-</package>
 <package name="INDUCTOR_3.0X3.0">
 <smd name="P$1" x="-1.125" y="0" dx="3" dy="0.75" layer="1" rot="R90"/>
 <smd name="P$2" x="1.125" y="0" dx="3" dy="0.75" layer="1" rot="R90"/>
@@ -1545,32 +1495,6 @@ BATTERY</description>
 <pin name="FB" x="15.24" y="-5.08" length="middle" rot="R180"/>
 <pin name="RUN" x="-15.24" y="-5.08" length="middle"/>
 <pin name="VIN" x="-15.24" y="2.54" length="middle"/>
-<wire x1="-10.16" y1="7.62" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="10.16" y1="-10.16" x2="10.16" y2="7.62" width="0.254" layer="94"/>
-<wire x1="10.16" y1="7.62" x2="-10.16" y2="7.62" width="0.254" layer="94"/>
-<text x="-10.16" y="8.89" size="1.27" layer="95">&gt;NAME</text>
-<text x="1.27" y="-12.7" size="1.27" layer="95">&gt;VALUE</text>
-</symbol>
-<symbol name="RICHTEK-RT3000CGQM">
-<pin name="SDA" x="10.16" y="5.08" length="middle" rot="R180"/>
-<pin name="SCL" x="10.16" y="2.54" length="middle" rot="R180"/>
-<pin name="VDDIO" x="10.16" y="12.7" length="middle" rot="R180"/>
-<pin name="INT1" x="10.16" y="0" length="middle" rot="R180"/>
-<pin name="VDD" x="10.16" y="15.24" length="middle" rot="R180"/>
-<pin name="GND" x="10.16" y="-7.62" length="middle" rot="R180"/>
-<wire x1="5.08" y1="17.78" x2="-10.16" y2="17.78" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="17.78" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="-10.16" y1="-10.16" x2="5.08" y2="-10.16" width="0.254" layer="94"/>
-<wire x1="5.08" y1="-10.16" x2="5.08" y2="17.78" width="0.254" layer="94"/>
-<text x="-10.16" y="19.05" size="1.27" layer="95">&gt;NAME</text>
-<text x="-10.16" y="-12.7" size="1.27" layer="96">&gt;VALUE</text>
-</symbol>
-<symbol name="HDC1080">
-<pin name="SDA" x="15.24" y="2.54" length="middle" rot="R180"/>
-<pin name="GND" x="0" y="-15.24" length="middle" rot="R90"/>
-<pin name="SCL" x="15.24" y="-5.08" length="middle" rot="R180"/>
-<pin name="VIN" x="0" y="12.7" length="middle" rot="R270"/>
 <wire x1="-10.16" y1="7.62" x2="-10.16" y2="-10.16" width="0.254" layer="94"/>
 <wire x1="-10.16" y1="-10.16" x2="10.16" y2="-10.16" width="0.254" layer="94"/>
 <wire x1="10.16" y1="-10.16" x2="10.16" y2="7.62" width="0.254" layer="94"/>
@@ -1739,55 +1663,6 @@ BATTERY</description>
 <connect gate="G$1" pin="RUN" pad="1"/>
 <connect gate="G$1" pin="SW" pad="3"/>
 <connect gate="G$1" pin="VIN" pad="4"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="RICHTEK-RT3000CGQM">
-<gates>
-<gate name="G$1" symbol="RICHTEK-RT3000CGQM" x="2.54" y="-2.54"/>
-</gates>
-<devices>
-<device name="" package="MDFN-10L_3X3">
-<connects>
-<connect gate="G$1" pin="GND" pad="P$4"/>
-<connect gate="G$1" pin="INT1" pad="P$5"/>
-<connect gate="G$1" pin="SCL" pad="P$6"/>
-<connect gate="G$1" pin="SDA" pad="P$7"/>
-<connect gate="G$1" pin="VDD" pad="P$3"/>
-<connect gate="G$1" pin="VDDIO" pad="P$9"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-<deviceset name="HDC1080">
-<gates>
-<gate name="G$1" symbol="HDC1080" x="0" y="0"/>
-</gates>
-<devices>
-<device name="PAD" package="WSON6_PAD">
-<connects>
-<connect gate="G$1" pin="GND" pad="P$2"/>
-<connect gate="G$1" pin="SCL" pad="P$6"/>
-<connect gate="G$1" pin="SDA" pad="P$1"/>
-<connect gate="G$1" pin="VIN" pad="P$5"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-<device name="NOPAD" package="WSON6_NOPAD">
-<connects>
-<connect gate="G$1" pin="GND" pad="P$2"/>
-<connect gate="G$1" pin="SCL" pad="P$6"/>
-<connect gate="G$1" pin="SDA" pad="P$1"/>
-<connect gate="G$1" pin="VIN" pad="P$5"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -17441,67 +17316,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-Aesthetics" urn="urn:adsk.eagle:library:507">
-<description>&lt;h3&gt;SparkFun Aesthetics&lt;/h3&gt;
-This library contiains non-functional items such as logos, build/ordering notes, frame blocks, etc. 
-&lt;br&gt;
-&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
-&lt;br&gt;
-&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
-&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;
-&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-</packages>
-<symbols>
-<symbol name="FR-A4L" urn="urn:adsk.eagle:symbol:37073/1" library_version="1">
-<description>&lt;h3&gt;Schematic Frame - A4L - European Format&lt;/h3&gt;
-&lt;p&gt;Standard A4 size frame in Landscape&lt;/p&gt;
-&lt;p&gt;Devices using:
-&lt;ul&gt;&lt;li&gt;FRAME-A4L&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
-<rectangle x1="178.7652" y1="0" x2="179.3748" y2="20.32" layer="94"/>
-<rectangle x1="225.7552" y1="-26.67" x2="226.3648" y2="67.31" layer="94" rot="R90"/>
-<wire x1="225.29" y1="-0.1" x2="225.29" y2="5.08" width="0.1016" layer="94"/>
-<wire x1="225.29" y1="5.08" x2="273.05" y2="5.08" width="0.1016" layer="94"/>
-<wire x1="225.29" y1="5.08" x2="179.07" y2="5.08" width="0.1016" layer="94"/>
-<wire x1="179.07" y1="10.16" x2="225.29" y2="10.16" width="0.1016" layer="94"/>
-<wire x1="225.29" y1="10.16" x2="273.05" y2="10.16" width="0.1016" layer="94"/>
-<wire x1="179.07" y1="15.24" x2="273.05" y2="15.24" width="0.1016" layer="94"/>
-<wire x1="225.29" y1="5.08" x2="225.29" y2="10.16" width="0.1016" layer="94"/>
-<wire x1="179.07" y1="19.05" x2="179.07" y2="20.32" width="0.6096" layer="94"/>
-<wire x1="179.07" y1="20.32" x2="180.34" y2="20.32" width="0.6096" layer="94"/>
-<text x="181.61" y="11.43" size="2.54" layer="94" font="vector">&gt;DRAWING_NAME</text>
-<text x="181.61" y="6.35" size="2.286" layer="94" font="vector">&gt;LAST_DATE_TIME</text>
-<text x="195.58" y="1.27" size="2.54" layer="94" font="vector">&gt;SHEET</text>
-<text x="181.61" y="1.27" size="2.54" layer="94" font="vector">Sheet:</text>
-<text x="181.61" y="16.51" size="2.54" layer="94" font="vector">&gt;CNAME</text>
-<text x="226.16" y="1.27" size="2.54" layer="94" font="vector">Rev:</text>
-<text x="226.26" y="6.35" size="2.54" layer="94" font="vector">&gt;DESIGNER</text>
-<text x="234.92" y="1.17" size="2.54" layer="94" font="vector">&gt;CREVISION</text>
-<frame x1="-3.81" y1="-3.81" x2="276.86" y2="182.88" columns="8" rows="5" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="FRAME-A4L" urn="urn:adsk.eagle:component:37152/1" prefix="FRAME" library_version="1">
-<description>&lt;h3&gt;Schematic Frame - A4L - European Format&lt;/h3&gt;
-&lt;p&gt;Standard A4 size frame in Landscape&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="FR-A4L" x="0" y="0"/>
-</gates>
-<devices>
-<device name="">
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 </libraries>
 <attributes>
 </attributes>
@@ -17611,12 +17425,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="R1007" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="1k"/>
 <part name="R1009" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="2k"/>
 <part name="GND20" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="FRAME6" library="SparkFun-Aesthetics" library_urn="urn:adsk.eagle:library:507" deviceset="FRAME-A4L" device=""/>
-<part name="GND21" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="SUPPLY23" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
-<part name="SUPPLY24" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
-<part name="GND22" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
-<part name="U6001" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="R8004" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-EU_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="10k"/>
 <part name="SUPPLY25" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 <part name="U2100" library="geusebio" deviceset="M3406" device=""/>
@@ -17632,11 +17440,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="L2001" library="geusebio" deviceset="INDUCTOR_3.0X3.0" device="3.0X3.0" value="10uH"/>
 <part name="SUPPLY18" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 <part name="SUPPLY19" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
-<part name="U6000" library="geusebio" deviceset="RICHTEK-RT3000CGQM" device=""/>
 <part name="SUPPLY26" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
-<part name="U6100" library="geusebio" deviceset="HDC1080" device="NOPAD"/>
-<part name="SUPPLY27" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
-<part name="GND25" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="SUPPLY8" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="5V" device=""/>
 </parts>
 <sheets>
@@ -19017,124 +18821,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="99.06" y1="76.2" x2="99.06" y2="81.28" width="0.1524" layer="91"/>
 <wire x1="99.06" y1="76.2" x2="106.68" y2="76.2" width="0.1524" layer="91"/>
 <junction x="99.06" y="76.2"/>
-</segment>
-</net>
-</nets>
-</sheet>
-<sheet>
-<description>Sensor Array</description>
-<plain>
-</plain>
-<instances>
-<instance part="FRAME6" gate="G$1" x="0" y="0" smashed="yes">
-<attribute name="DRAWING_NAME" x="181.61" y="11.43" size="2.54" layer="94" font="vector"/>
-<attribute name="LAST_DATE_TIME" x="181.61" y="6.35" size="2.286" layer="94" font="vector"/>
-<attribute name="SHEET" x="195.58" y="1.27" size="2.54" layer="94" font="vector"/>
-</instance>
-<instance part="GND21" gate="1" x="68.58" y="25.4" smashed="yes">
-<attribute name="VALUE" x="68.58" y="25.146" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="SUPPLY23" gate="G$1" x="68.58" y="58.42" smashed="yes">
-<attribute name="VALUE" x="68.58" y="61.214" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="SUPPLY24" gate="G$1" x="91.44" y="58.42" smashed="yes">
-<attribute name="VALUE" x="91.44" y="61.214" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="GND22" gate="1" x="91.44" y="25.4" smashed="yes">
-<attribute name="VALUE" x="91.44" y="25.146" size="1.778" layer="96" align="top-center"/>
-</instance>
-<instance part="U6001" gate="G$1" x="91.44" y="45.72" smashed="yes">
-<attribute name="NAME" x="92.964" y="46.101" size="1.778" layer="95"/>
-<attribute name="VALUE" x="92.964" y="41.021" size="1.778" layer="96"/>
-</instance>
-<instance part="U6000" gate="G$1" x="55.88" y="40.64" smashed="yes">
-<attribute name="NAME" x="45.72" y="59.69" size="1.27" layer="95"/>
-<attribute name="VALUE" x="45.72" y="27.94" size="1.27" layer="96"/>
-</instance>
-<instance part="U6100" gate="G$1" x="55.88" y="88.9" smashed="yes">
-<attribute name="NAME" x="45.72" y="97.79" size="1.27" layer="95"/>
-<attribute name="VALUE" x="57.15" y="76.2" size="1.27" layer="95"/>
-</instance>
-<instance part="SUPPLY27" gate="G$1" x="55.88" y="104.14" smashed="yes">
-<attribute name="VALUE" x="55.88" y="106.934" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="GND25" gate="1" x="55.88" y="68.58" smashed="yes">
-<attribute name="VALUE" x="55.88" y="68.326" size="1.778" layer="96" align="top-center"/>
-</instance>
-</instances>
-<busses>
-</busses>
-<nets>
-<net name="SDA/GPIO4" class="0">
-<segment>
-<wire x1="66.04" y1="45.72" x2="68.58" y2="45.72" width="0.1524" layer="91"/>
-<label x="68.58" y="45.72" size="1.27" layer="95" xref="yes"/>
-<pinref part="U6000" gate="G$1" pin="SDA"/>
-</segment>
-<segment>
-<wire x1="71.12" y1="91.44" x2="73.66" y2="91.44" width="0.1524" layer="91"/>
-<label x="73.66" y="91.44" size="1.27" layer="95" xref="yes"/>
-<pinref part="U6100" gate="G$1" pin="SDA"/>
-</segment>
-</net>
-<net name="SCL/GPIO0" class="0">
-<segment>
-<wire x1="66.04" y1="43.18" x2="68.58" y2="43.18" width="0.1524" layer="91"/>
-<label x="68.58" y="43.18" size="1.27" layer="95" xref="yes"/>
-<pinref part="U6000" gate="G$1" pin="SCL"/>
-</segment>
-<segment>
-<wire x1="71.12" y1="83.82" x2="73.66" y2="83.82" width="0.1524" layer="91"/>
-<label x="73.66" y="83.82" size="1.27" layer="95" xref="yes"/>
-<pinref part="U6100" gate="G$1" pin="SCL"/>
-</segment>
-</net>
-<net name="ACC_INT/GPIO15" class="0">
-<segment>
-<wire x1="66.04" y1="40.64" x2="68.58" y2="40.64" width="0.1524" layer="91"/>
-<label x="68.58" y="40.64" size="1.27" layer="95" xref="yes"/>
-<pinref part="U6000" gate="G$1" pin="INT1"/>
-</segment>
-</net>
-<net name="GND" class="0">
-<segment>
-<wire x1="66.04" y1="33.02" x2="68.58" y2="33.02" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="33.02" x2="68.58" y2="30.48" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="30.48" x2="68.58" y2="27.94" width="0.1524" layer="91"/>
-<pinref part="GND21" gate="1" pin="GND"/>
-<pinref part="U6000" gate="G$1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="GND22" gate="1" pin="GND"/>
-<pinref part="U6001" gate="G$1" pin="2"/>
-<wire x1="91.44" y1="40.64" x2="91.44" y2="27.94" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U6100" gate="G$1" pin="GND"/>
-<pinref part="GND25" gate="1" pin="GND"/>
-<wire x1="55.88" y1="71.12" x2="55.88" y2="73.66" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="3.3V" class="0">
-<segment>
-<wire x1="66.04" y1="55.88" x2="68.58" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="66.04" y1="53.34" x2="68.58" y2="53.34" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="53.34" x2="68.58" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="68.58" y1="58.42" x2="68.58" y2="55.88" width="0.1524" layer="91"/>
-<junction x="68.58" y="55.88"/>
-<pinref part="SUPPLY23" gate="G$1" pin="3.3V"/>
-<pinref part="U6000" gate="G$1" pin="VDDIO"/>
-<pinref part="U6000" gate="G$1" pin="VDD"/>
-</segment>
-<segment>
-<pinref part="SUPPLY24" gate="G$1" pin="3.3V"/>
-<pinref part="U6001" gate="G$1" pin="1"/>
-<wire x1="91.44" y1="48.26" x2="91.44" y2="58.42" width="0.1524" layer="91"/>
-</segment>
-<segment>
-<pinref part="U6100" gate="G$1" pin="VIN"/>
-<pinref part="SUPPLY27" gate="G$1" pin="3.3V"/>
-<wire x1="55.88" y1="104.14" x2="55.88" y2="101.6" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
