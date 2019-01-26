@@ -1350,6 +1350,47 @@ BATTERY</description>
 <wire x1="1.5" y1="-1.5" x2="-1.5" y2="-1.5" width="0.127" layer="21"/>
 <wire x1="-1.5" y1="-1.5" x2="-1.5" y2="1.5" width="0.127" layer="21"/>
 </package>
+<package name="USB_C-XKBENTERPRISEU262-16XN-4BVC11">
+<smd name="SBU2" x="-1.75" y="0" dx="1.15" dy="0.3" layer="1" rot="R90"/>
+<smd name="CC2" x="1.75" y="0" dx="1.15" dy="0.3" layer="1" rot="R90"/>
+<smd name="CC1" x="-1.25" y="0" dx="1.15" dy="0.3" layer="1" rot="R90"/>
+<smd name="D-1" x="-0.75" y="0" dx="1.15" dy="0.3" layer="1" rot="R90"/>
+<smd name="D+1" x="-0.25" y="0" dx="1.15" dy="0.3" layer="1" rot="R90"/>
+<smd name="D-2" x="0.25" y="0" dx="1.15" dy="0.3" layer="1" rot="R90"/>
+<smd name="D+2" x="0.75" y="0" dx="1.15" dy="0.3" layer="1" rot="R90"/>
+<smd name="SBU1" x="1.25" y="0" dx="1.15" dy="0.3" layer="1" rot="R90"/>
+<smd name="V+1" x="-2.4" y="0" dx="1.15" dy="0.6" layer="1" rot="R90"/>
+<smd name="GND1" x="-3.2" y="0" dx="1.15" dy="0.6" layer="1" rot="R90"/>
+<smd name="V+2" x="2.4" y="0" dx="1.15" dy="0.6" layer="1" rot="R90"/>
+<smd name="GND2" x="3.2" y="0" dx="1.15" dy="0.6" layer="1" rot="R90"/>
+<hole x="-2.89" y="-1.075" drill="0.65"/>
+<hole x="2.89" y="-1.075" drill="0.65"/>
+<wire x1="-4.62" y1="-4.455" x2="-4.02" y2="-4.455" width="0" layer="20" curve="-180"/>
+<wire x1="-4.02" y1="-5.055" x2="-4.62" y2="-5.055" width="0" layer="20" curve="-180"/>
+<wire x1="-4.62" y1="-0.025" x2="-4.02" y2="-0.025" width="0" layer="20" curve="-180"/>
+<wire x1="-4.02" y1="-1.125" x2="-4.62" y2="-1.125" width="0" layer="20" curve="-180"/>
+<wire x1="-4.02" y1="-0.025" x2="-4.02" y2="-1.125" width="0" layer="20"/>
+<wire x1="-4.62" y1="-1.125" x2="-4.62" y2="-0.025" width="0" layer="20"/>
+<wire x1="4.62" y1="-4.455" x2="4.02" y2="-4.455" width="0" layer="20" curve="180"/>
+<wire x1="4.02" y1="-5.055" x2="4.62" y2="-5.055" width="0" layer="20" curve="180"/>
+<wire x1="4.62" y1="-0.025" x2="4.02" y2="-0.025" width="0" layer="20" curve="180"/>
+<wire x1="4.02" y1="-1.125" x2="4.62" y2="-1.125" width="0" layer="20" curve="180"/>
+<wire x1="-4" y1="-7.355" x2="4" y2="-7.355" width="0.127" layer="21"/>
+<wire x1="-4.02" y1="-4.455" x2="-4.02" y2="-5.055" width="0" layer="20"/>
+<wire x1="-4.62" y1="-5.055" x2="-4.62" y2="-4.455" width="0" layer="20"/>
+<wire x1="4.02" y1="-4.455" x2="4.02" y2="-5.055" width="0" layer="20"/>
+<wire x1="4.62" y1="-5.055" x2="4.62" y2="-4.455" width="0" layer="20"/>
+<wire x1="4.02" y1="-0.025" x2="4.02" y2="-1.125" width="0" layer="20"/>
+<wire x1="4.62" y1="-1.125" x2="4.62" y2="-0.025" width="0" layer="20"/>
+<smd name="SHIELD_4" x="-4.32" y="-0.575" dx="2.1" dy="1" layer="1" roundness="100" rot="R90"/>
+<smd name="SHIELD_3" x="-4.32" y="-4.755" dx="1.6" dy="1" layer="1" roundness="100" rot="R90"/>
+<smd name="SHIELD_1" x="-4.32" y="-4.755" dx="1.6" dy="1" layer="16" roundness="100" rot="R90"/>
+<smd name="SHIELD_2" x="-4.32" y="-0.575" dx="2.1" dy="1" layer="16" roundness="100" rot="R90"/>
+<smd name="SHIELD_5" x="4.32" y="-0.575" dx="2.1" dy="1" layer="1" roundness="100" rot="R90"/>
+<smd name="SHIELD_6" x="4.32" y="-4.755" dx="1.6" dy="1" layer="1" roundness="100" rot="R90"/>
+<smd name="SHIELD_7" x="4.32" y="-0.575" dx="2.1" dy="1" layer="16" roundness="100" rot="R90"/>
+<smd name="SHIELD_8" x="4.32" y="-4.755" dx="1.6" dy="1" layer="16" roundness="100" rot="R90"/>
+</package>
 </packages>
 <symbols>
 <symbol name="TP4056">
@@ -1519,6 +1560,22 @@ BATTERY</description>
 <pin name="1" x="0" y="7.62" visible="off" length="short" direction="pas" swaplevel="1" rot="R270"/>
 <pin name="2" x="0" y="-7.62" visible="off" length="short" direction="pas" swaplevel="1" rot="R90"/>
 </symbol>
+<symbol name="USB">
+<description>&lt;h3&gt;USB A/B - with Shield Pins&lt;/h3&gt;
+&lt;p&gt;USB connector for type-A and type-B connectors. Includes shield pins broken out. &lt;/p&gt;</description>
+<wire x1="7.62" y1="7.62" x2="-5.08" y2="7.62" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="7.62" x2="-5.08" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="-5.08" y1="-5.08" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="7.62" y2="-5.08" width="0.254" layer="94"/>
+<text x="6.35" y="-2.54" size="2.54" layer="94" rot="R90">USB</text>
+<text x="-5.08" y="7.874" size="1.778" layer="95" font="vector">&gt;NAME</text>
+<text x="-5.08" y="-5.334" size="1.778" layer="96" font="vector" align="top-left">&gt;VALUE</text>
+<pin name="D+" x="-7.62" y="0" length="short"/>
+<pin name="D-" x="-7.62" y="2.54" length="short"/>
+<pin name="VBUS" x="-7.62" y="5.08" length="short" direction="pwr"/>
+<pin name="GND" x="-7.62" y="-2.54" length="short" direction="pwr"/>
+<pin name="SHIELD" x="10.16" y="2.54" visible="pad" length="short" rot="R180"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="TP4056" prefix="IC">
@@ -1682,6 +1739,25 @@ BATTERY</description>
 <connects>
 <connect gate="G$1" pin="1" pad="P$1"/>
 <connect gate="G$1" pin="2" pad="P$2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="USB-C">
+<gates>
+<gate name="G$1" symbol="USB" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="USB_C-XKBENTERPRISEU262-16XN-4BVC11">
+<connects>
+<connect gate="G$1" pin="D+" pad="D+1 D+2"/>
+<connect gate="G$1" pin="D-" pad="D-1 D-2"/>
+<connect gate="G$1" pin="GND" pad="GND1 GND2"/>
+<connect gate="G$1" pin="SHIELD" pad="SHIELD_1 SHIELD_2 SHIELD_3 SHIELD_4 SHIELD_5 SHIELD_6 SHIELD_7 SHIELD_8"/>
+<connect gate="G$1" pin="VBUS" pad="V+1 V+2"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -10556,125 +10632,6 @@ Allows current flow when high potential at base.</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="SparkFun-Connectors" urn="urn:adsk.eagle:library:513">
-<description>&lt;h3&gt;SparkFun Connectors&lt;/h3&gt;
-This library contains electrically-functional connectors. 
-&lt;br&gt;
-&lt;br&gt;
-We've spent an enormous amount of time creating and checking these footprints and parts, but it is &lt;b&gt; the end user's responsibility&lt;/b&gt; to ensure correctness and suitablity for a given componet or application. 
-&lt;br&gt;
-&lt;br&gt;If you enjoy using this library, please buy one of our products at &lt;a href=" www.sparkfun.com"&gt;SparkFun.com&lt;/a&gt;.
-&lt;br&gt;
-&lt;br&gt;
-&lt;b&gt;Licensing:&lt;/b&gt; Creative Commons ShareAlike 4.0 International - https://creativecommons.org/licenses/by-sa/4.0/ 
-&lt;br&gt;
-&lt;br&gt;
-You are welcome to use this library for commercial purposes. For attribution, we ask that when you begin to sell your device using our footprint, you email us with a link to the product being sold. We want bragging rights that we helped (in a very small part) to create your 8th world wonder. We would like the opportunity to feature your device on our homepage.</description>
-<packages>
-<package name="USB-MINIB" urn="urn:adsk.eagle:footprint:37891/1" library_version="1">
-<description>&lt;h3&gt;USB Type Mini-B Surface Mounted&lt;/h3&gt;
-&lt;p&gt;Specifications:
-&lt;ul&gt;&lt;li&gt;Pin count: 5 main, 4 shield pins&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;
-&lt;p&gt;&lt;a href=”https://www.sparkfun.com/datasheets/Prototyping/miniUSB-Dimensional.pdf”&gt;Datasheet referenced for footprint&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Example device(s):
-&lt;ul&gt;&lt;li&gt;USB_Mini-B&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<wire x1="-1.3" y1="3.8" x2="0.8" y2="3.8" width="0.2032" layer="21"/>
-<wire x1="3.3" y1="3.1" x2="3.3" y2="2.2" width="0.2032" layer="21"/>
-<wire x1="3.3" y1="-2.2" x2="3.3" y2="-3.1" width="0.2032" layer="21"/>
-<wire x1="0.8" y1="-3.8" x2="-1.3" y2="-3.8" width="0.2032" layer="21"/>
-<wire x1="-5.9" y1="3.8" x2="-5.9" y2="-3.8" width="0.2032" layer="51"/>
-<wire x1="-5.9" y1="-3.8" x2="-4.5" y2="-3.8" width="0.2032" layer="51"/>
-<wire x1="-5.9" y1="3.8" x2="-4.5" y2="3.8" width="0.2032" layer="51"/>
-<smd name="D+" x="2.5" y="0" dx="2.5" dy="0.5" layer="1"/>
-<smd name="D-" x="2.5" y="0.8" dx="2.5" dy="0.5" layer="1"/>
-<smd name="GND" x="2.5" y="-1.6" dx="2.5" dy="0.5" layer="1"/>
-<smd name="ID" x="2.5" y="-0.8" dx="2.5" dy="0.5" layer="1"/>
-<smd name="S3" x="-3" y="-4.5" dx="2.5" dy="2" layer="1"/>
-<smd name="S1" x="-3" y="4.5" dx="2.5" dy="2" layer="1"/>
-<smd name="S4" x="2.5" y="-4.5" dx="2.5" dy="2" layer="1"/>
-<smd name="S2" x="2.5" y="4.5" dx="2.5" dy="2" layer="1"/>
-<smd name="VBUS" x="2.5" y="1.6" dx="2.5" dy="0.5" layer="1"/>
-<text x="-3.81" y="6.35" size="0.8128" layer="25" font="vector" ratio="20">&gt;NAME</text>
-<text x="-3.81" y="-6.35" size="0.8128" layer="27" font="vector" ratio="20" align="top-left">&gt;VALUE</text>
-<hole x="0" y="2.2" drill="0.9"/>
-<hole x="0" y="-2.2" drill="0.9"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="USB-MINIB" urn="urn:adsk.eagle:package:38244/1" type="box" library_version="1">
-<description>USB Type Mini-B Surface Mounted
-Specifications:
-Pin count: 5 main, 4 shield pins
-
-Datasheet referenced for footprint
-
-Example device(s):
-USB_Mini-B
-</description>
-<packageinstances>
-<packageinstance name="USB-MINIB"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="USB-5PIN" urn="urn:adsk.eagle:symbol:37890/1" library_version="1">
-<description>&lt;h3&gt;USB - 5 pin&lt;/h3&gt;
-&lt;p&gt;5 pin USB connector: VBUS, GND, D+, D-, ID &lt;/p&gt;
-&lt;p&gt;Includes 4 pins for shield connections &lt;/p&gt;</description>
-<wire x1="5.08" y1="7.62" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="-2.54" y1="-7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
-<wire x1="5.08" y1="7.62" x2="5.08" y2="-7.62" width="0.254" layer="94"/>
-<text x="2.794" y="-3.302" size="2.54" layer="94" rot="R90">USB</text>
-<text x="-2.54" y="-7.874" size="1.778" layer="96" font="vector" align="top-left">&gt;VALUE</text>
-<text x="-2.54" y="7.62" size="1.778" layer="95" font="vector">&gt;NAME</text>
-<pin name="D+" x="-5.08" y="0" visible="pad" length="short"/>
-<pin name="D-" x="-5.08" y="2.54" visible="pad" length="short"/>
-<pin name="VBUS" x="-5.08" y="5.08" visible="pad" length="short" direction="pwr"/>
-<pin name="GND" x="-5.08" y="-5.08" visible="pad" length="short" direction="pwr"/>
-<pin name="ID" x="-5.08" y="-2.54" visible="pad" length="short"/>
-<pin name="SHIELD" x="7.62" y="0" visible="pad" length="short" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="USB_MINI-B" urn="urn:adsk.eagle:component:38367/1" prefix="J" library_version="1">
-<description>&lt;h3&gt;USB type Mini-B Connector&lt;/h3&gt;
-&lt;p&gt;Breaks out 5th pin, and includes shield pins if needed.&lt;/p&gt;
-&lt;p&gt;SparkFun Products:
-&lt;ul&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/9716”&gt;SparkFun FTDI Basic Breakout&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/11812”&gt;SparkFun XBee Explorer USB&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/12757”&gt;SparkFun Redboard&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="USB-5PIN" x="0" y="0"/>
-</gates>
-<devices>
-<device name="_SMT" package="USB-MINIB">
-<connects>
-<connect gate="G$1" pin="D+" pad="D+"/>
-<connect gate="G$1" pin="D-" pad="D-"/>
-<connect gate="G$1" pin="GND" pad="GND"/>
-<connect gate="G$1" pin="ID" pad="ID"/>
-<connect gate="G$1" pin="SHIELD" pad="S1 S2 S3 S4"/>
-<connect gate="G$1" pin="VBUS" pad="VBUS"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:38244/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="PROD_ID" value="CONN-08193"/>
-<attribute name="SF_ID" value="PRT-00587" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="SparkFun-Fuses" urn="urn:adsk.eagle:library:517">
 <description>&lt;h3&gt;SparkFun Fuses&lt;/h3&gt;
 In this library you'll find fuses, or fuse like components such as PTCs. Reference designator F.
@@ -18204,10 +18161,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="FRAME3" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA5_L" device=""/>
 <part name="FRAME4" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA5_L" device=""/>
 <part name="FRAME5" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="DINA5_L" device=""/>
-<part name="J1" library="SparkFun-Connectors" library_urn="urn:adsk.eagle:library:513" deviceset="USB_MINI-B" device="_SMT" package3d_urn="urn:adsk.eagle:package:38244/1"/>
 <part name="F1" library="SparkFun-Fuses" library_urn="urn:adsk.eagle:library:517" deviceset="PPTC" device="_HALF-AMP" package3d_urn="urn:adsk.eagle:package:38575/1" value="6V/0.5A"/>
 <part name="SUPPLY9" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="V_USB" device=""/>
-<part name="GND8" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="GND9" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="C5004" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uF"/>
 <part name="GND11" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
@@ -18293,6 +18248,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="C9000" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-EU" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="0.1uf"/>
 <part name="GND21" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="GND" device=""/>
 <part name="SUPPLY27" library="SparkFun-PowerSymbols" library_urn="urn:adsk.eagle:library:530" deviceset="3.3V" device=""/>
+<part name="U$2" library="geusebio" deviceset="USB-C" device=""/>
+<part name="STATUS1" library="SparkFun-LED" library_urn="urn:adsk.eagle:library:529" deviceset="LED-RGB" device="NO_IC" package3d_urn="urn:adsk.eagle:package:39374/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -18931,17 +18888,17 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <instance part="SUPPLY20" gate="G$1" x="109.22" y="60.96" smashed="yes">
 <attribute name="VALUE" x="109.22" y="63.754" size="1.778" layer="96" align="bottom-center"/>
 </instance>
-<instance part="R8020" gate="G$1" x="66.04" y="55.88" smashed="yes">
-<attribute name="NAME" x="62.23" y="57.3786" size="1.778" layer="95"/>
-<attribute name="VALUE" x="62.23" y="52.578" size="1.778" layer="96"/>
+<instance part="R8020" gate="G$1" x="58.42" y="55.88" smashed="yes">
+<attribute name="NAME" x="54.61" y="57.3786" size="1.778" layer="95"/>
+<attribute name="VALUE" x="54.61" y="52.578" size="1.778" layer="96"/>
 </instance>
-<instance part="R8021" gate="G$1" x="66.04" y="53.34" smashed="yes">
-<attribute name="NAME" x="62.23" y="54.8386" size="1.778" layer="95"/>
-<attribute name="VALUE" x="62.23" y="50.038" size="1.778" layer="96"/>
+<instance part="R8021" gate="G$1" x="58.42" y="53.34" smashed="yes">
+<attribute name="NAME" x="54.61" y="54.8386" size="1.778" layer="95"/>
+<attribute name="VALUE" x="54.61" y="50.038" size="1.778" layer="96"/>
 </instance>
-<instance part="R8022" gate="G$1" x="66.04" y="50.8" smashed="yes">
-<attribute name="NAME" x="62.23" y="52.2986" size="1.778" layer="95"/>
-<attribute name="VALUE" x="62.23" y="47.498" size="1.778" layer="96"/>
+<instance part="R8022" gate="G$1" x="58.42" y="50.8" smashed="yes">
+<attribute name="NAME" x="54.61" y="52.2986" size="1.778" layer="95"/>
+<attribute name="VALUE" x="54.61" y="47.498" size="1.778" layer="96"/>
 </instance>
 <instance part="TX" gate="G$1" x="104.14" y="116.84" smashed="yes" rot="R270">
 <attribute name="NAME" x="105.41" y="118.11" size="1.778" layer="95" rot="R270"/>
@@ -19012,6 +18969,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </instance>
 <instance part="SUPPLY27" gate="G$1" x="172.72" y="121.92" smashed="yes">
 <attribute name="VALUE" x="172.72" y="124.714" size="1.778" layer="96" align="bottom-center"/>
+</instance>
+<instance part="STATUS1" gate="G$1" x="88.9" y="40.64" smashed="yes" rot="MR0">
+<attribute name="NAME" x="88.9" y="46.355" size="1.778" layer="95" font="vector" rot="MR0" align="bottom-center"/>
+<attribute name="VALUE" x="88.9" y="34.925" size="1.778" layer="95" font="vector" rot="MR0" align="top-center"/>
 </instance>
 </instances>
 <busses>
@@ -19102,8 +19063,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="R8021" gate="G$1" pin="1"/>
-<wire x1="58.42" y1="53.34" x2="60.96" y2="53.34" width="0.1524" layer="91"/>
-<label x="58.42" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="50.8" y1="53.34" x2="53.34" y2="53.34" width="0.1524" layer="91"/>
+<label x="50.8" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="3.3V" class="0">
@@ -19162,6 +19123,18 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <wire x1="104.14" y1="50.8" x2="109.22" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="50.8" x2="109.22" y2="53.34" width="0.1524" layer="91"/>
 <junction x="109.22" y="53.34"/>
+<pinref part="STATUS1" gate="G$1" pin="BLU-A"/>
+<wire x1="104.14" y1="43.18" x2="109.22" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="43.18" x2="109.22" y2="40.64" width="0.1524" layer="91"/>
+<pinref part="STATUS1" gate="G$1" pin="RED-A"/>
+<wire x1="109.22" y1="40.64" x2="109.22" y2="38.1" width="0.1524" layer="91"/>
+<wire x1="109.22" y1="38.1" x2="104.14" y2="38.1" width="0.1524" layer="91"/>
+<pinref part="STATUS1" gate="G$1" pin="GRN-A"/>
+<wire x1="104.14" y1="40.64" x2="109.22" y2="40.64" width="0.1524" layer="91"/>
+<junction x="109.22" y="40.64"/>
+<wire x1="109.22" y1="43.18" x2="109.22" y2="50.8" width="0.1524" layer="91"/>
+<junction x="109.22" y="43.18"/>
+<junction x="109.22" y="50.8"/>
 </segment>
 <segment>
 <pinref part="U9000" gate="G$1" pin="VDD"/>
@@ -19201,8 +19174,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="R8022" gate="G$1" pin="1"/>
-<wire x1="60.96" y1="50.8" x2="58.42" y2="50.8" width="0.1524" layer="91"/>
-<label x="58.42" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="53.34" y1="50.8" x2="50.8" y2="50.8" width="0.1524" layer="91"/>
+<label x="50.8" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CS0" class="0">
@@ -19294,8 +19267,8 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </segment>
 <segment>
 <pinref part="R8020" gate="G$1" pin="1"/>
-<wire x1="60.96" y1="55.88" x2="58.42" y2="55.88" width="0.1524" layer="91"/>
-<label x="58.42" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="53.34" y1="55.88" x2="50.8" y2="55.88" width="0.1524" layer="91"/>
+<label x="50.8" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SDA/GPIO4" class="0">
@@ -19398,21 +19371,36 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <segment>
 <pinref part="R8020" gate="G$1" pin="2"/>
 <pinref part="STATUS" gate="G$1" pin="BLU-C"/>
-<wire x1="71.12" y1="55.88" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="63.5" y1="55.88" x2="66.04" y2="55.88" width="0.1524" layer="91"/>
+<pinref part="STATUS1" gate="G$1" pin="BLU-C"/>
+<wire x1="66.04" y1="55.88" x2="73.66" y2="55.88" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="43.18" x2="66.04" y2="43.18" width="0.1524" layer="91"/>
+<wire x1="66.04" y1="43.18" x2="66.04" y2="55.88" width="0.1524" layer="91"/>
+<junction x="66.04" y="55.88"/>
 </segment>
 </net>
 <net name="N$15" class="0">
 <segment>
 <pinref part="STATUS" gate="G$1" pin="GRN-C"/>
 <pinref part="R8021" gate="G$1" pin="2"/>
-<wire x1="73.66" y1="53.34" x2="71.12" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="53.34" x2="68.58" y2="53.34" width="0.1524" layer="91"/>
+<pinref part="STATUS1" gate="G$1" pin="GRN-C"/>
+<wire x1="68.58" y1="53.34" x2="63.5" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="73.66" y1="40.64" x2="68.58" y2="40.64" width="0.1524" layer="91"/>
+<wire x1="68.58" y1="40.64" x2="68.58" y2="53.34" width="0.1524" layer="91"/>
+<junction x="68.58" y="53.34"/>
 </segment>
 </net>
 <net name="N$16" class="0">
 <segment>
 <pinref part="R8022" gate="G$1" pin="2"/>
 <pinref part="STATUS" gate="G$1" pin="RED-C"/>
+<wire x1="63.5" y1="50.8" x2="71.12" y2="50.8" width="0.1524" layer="91"/>
 <wire x1="71.12" y1="50.8" x2="73.66" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="71.12" y1="50.8" x2="71.12" y2="38.1" width="0.1524" layer="91"/>
+<junction x="71.12" y="50.8"/>
+<pinref part="STATUS1" gate="G$1" pin="RED-C"/>
+<wire x1="71.12" y1="38.1" x2="73.66" y2="38.1" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="CHRG_3V3" class="0">
@@ -19539,19 +19527,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="LAST_DATE_TIME" x="140.97" y="10.16" size="2.286" layer="94"/>
 <attribute name="SHEET" x="154.305" y="5.08" size="2.54" layer="94"/>
 </instance>
-<instance part="J1" gate="G$1" x="25.4" y="111.76" smashed="yes" rot="MR0">
-<attribute name="VALUE" x="27.94" y="103.886" size="1.778" layer="96" font="vector" rot="MR0" align="top-left"/>
-<attribute name="NAME" x="27.94" y="119.38" size="1.778" layer="95" font="vector" rot="MR0"/>
-</instance>
 <instance part="F1" gate="G$1" x="53.34" y="116.84" smashed="yes">
 <attribute name="NAME" x="55.245" y="120.015" size="1.778" layer="95" font="vector" align="bottom-center"/>
 <attribute name="VALUE" x="54.61" y="114.046" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
 <instance part="SUPPLY9" gate="G$1" x="66.04" y="121.92" smashed="yes">
 <attribute name="VALUE" x="66.04" y="124.714" size="1.778" layer="96" align="bottom-center"/>
-</instance>
-<instance part="GND8" gate="1" x="15.24" y="96.52" smashed="yes">
-<attribute name="VALUE" x="15.24" y="96.266" size="1.778" layer="96" align="top-center"/>
 </instance>
 <instance part="GND9" gate="1" x="33.02" y="96.52" smashed="yes">
 <attribute name="VALUE" x="33.02" y="96.266" size="1.778" layer="96" align="top-center"/>
@@ -19595,15 +19576,19 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <attribute name="NAME" x="109.22" y="78.232" size="1.778" layer="95" font="vector" align="bottom-center"/>
 <attribute name="VALUE" x="109.22" y="74.168" size="1.778" layer="96" font="vector" align="top-center"/>
 </instance>
+<instance part="U$2" gate="G$1" x="22.86" y="111.76" smashed="yes" rot="MR0">
+<attribute name="NAME" x="27.94" y="119.634" size="1.778" layer="95" font="vector" rot="MR0"/>
+<attribute name="VALUE" x="27.94" y="106.426" size="1.778" layer="96" font="vector" rot="MR0" align="top-left"/>
+</instance>
 </instances>
 <busses>
 </busses>
 <nets>
-<net name="USB_P" class="0">
+<net name="D+" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="D+"/>
 <wire x1="30.48" y1="111.76" x2="35.56" y2="111.76" width="0.1524" layer="91"/>
 <label x="35.56" y="111.76" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$2" gate="G$1" pin="D+"/>
 </segment>
 <segment>
 <pinref part="U5000" gate="G$1" pin="D+"/>
@@ -19611,11 +19596,11 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <label x="43.18" y="71.12" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="USB_N" class="0">
+<net name="D-" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="D-"/>
 <wire x1="30.48" y1="114.3" x2="35.56" y2="114.3" width="0.1524" layer="91"/>
 <label x="35.56" y="114.3" size="1.27" layer="95" xref="yes"/>
+<pinref part="U$2" gate="G$1" pin="D-"/>
 </segment>
 <segment>
 <pinref part="U5000" gate="G$1" pin="D-"/>
@@ -19625,9 +19610,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="V_USB_UNFUSED" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="VBUS"/>
 <pinref part="F1" gate="G$1" pin="1"/>
 <wire x1="30.48" y1="116.84" x2="48.26" y2="116.84" width="0.1524" layer="91"/>
+<pinref part="U$2" gate="G$1" pin="VBUS"/>
 </segment>
 </net>
 <net name="V_USB" class="0">
@@ -19640,16 +19625,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 </net>
 <net name="GND" class="0">
 <segment>
-<pinref part="J1" gate="G$1" pin="SHIELD"/>
-<wire x1="17.78" y1="111.76" x2="15.24" y2="111.76" width="0.1524" layer="91"/>
-<wire x1="15.24" y1="111.76" x2="15.24" y2="99.06" width="0.1524" layer="91"/>
-<pinref part="GND8" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="J1" gate="G$1" pin="GND"/>
-<wire x1="30.48" y1="106.68" x2="33.02" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="106.68" x2="33.02" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="30.48" y1="109.22" x2="33.02" y2="109.22" width="0.1524" layer="91"/>
+<wire x1="33.02" y1="109.22" x2="33.02" y2="99.06" width="0.1524" layer="91"/>
 <pinref part="GND9" gate="1" pin="GND"/>
+<pinref part="U$2" gate="G$1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="U5000" gate="G$1" pin="GND"/>
