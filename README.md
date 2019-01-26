@@ -32,6 +32,10 @@ This is a board designed around an off-the-shelf ESP8266 ESP-12(E|F|S) module.
  * 3.3v regulator has been problematic so far. Hopefully resolved in rev11.
  * 5050 RGB LEDs don't have consistent pinout of which colour channel is on which pin, meaning the value of R8020-22 are unpredictable, and subject to change before assembly. I have debated using WS2812B or similar as a replacement, but increasing parts cost and program complexity deterred me.
 
+### Licencing
+
+Sunbird is licenced under the [Open Hardware TAPR licence](./LICENCE.md).
+
 ## PCB
 ![Render](images/3d.png)
 ![PCB view](images/pcb.png)
@@ -52,5 +56,8 @@ This is a board designed around an off-the-shelf ESP8266 ESP-12(E|F|S) module.
 
 ### USB UART
 ![USB UART](images/usb_uart_ch340g.png)
+
+
+
 
 
