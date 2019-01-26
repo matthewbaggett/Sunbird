@@ -33,24 +33,24 @@ This is a board designed around an off-the-shelf ESP8266 ESP-12(E|F|S) module.
  * 5050 RGB LEDs don't have consistent pinout of which colour channel is on which pin, meaning the value of R8020-22 are unpredictable, and subject to change before assembly. I have debated using WS2812B or similar as a replacement, but increasing parts cost and program complexity deterred me.
 
 ## PCB
-![Render][./images/3d.png]
-![PCB view][./images/pcb.png]
+![Render][images/3d.png]
+![PCB view][images/pcb.png]
 
 ## Schematics
 
 ### Processor
-![Processor][./images/processor.png]
+![Processor][images/processor.png]
 
 ### Battery Charger Circuit
-![Battery Charger][./images/battery_charger.png]
+![Battery Charger][images/battery_charger.png]
 
 ### Power Regulator
-![Power Regulator][./images/power_regulator.png]
+![Power Regulator][images/power_regulator.png]
 
 ### Motor Driver
-![Motor Driver][./images/motor_driver.png]
+![Motor Driver][images/motor_driver.png]
 
 ### USB UART
-![USB UART][./images/usb_uart_ch340g.png]
+![USB UART][images/usb_uart_ch340g.png]
 
 
